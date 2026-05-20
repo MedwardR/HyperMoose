@@ -57,6 +57,14 @@ public partial class Form1 : Form
             listBox1.DisplayMember = nameof(Herd.Name);
             listBox1.SelectedIndex = Array.FindIndex(groups, herd => herd.Name == _selection);
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Oh no: {ex}");
+            listBox1.DataSource = null;
+            listBox1.Items.Clear();
+            listBox1.Items.Add("Config file error!");
+            listBox1.Items.Add(ex.Message);
+        }
         finally
         {
             _loading = false;

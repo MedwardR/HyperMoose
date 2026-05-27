@@ -8,7 +8,8 @@ HyperMoose is a free service targeted at tech-savvy meese looking for a reliable
 
 # Technology
 
-- HyperMoose employs a state-of-the-art TCP backend, maximizing security and minimizing vulnerability.
-- HyperMoose is decentralized software; your data is thus immune to pernicious corporations via a new technology known as every-client-is-also-a-server systems.
+- HyperMoose employs a state-of-the-art TCP backend, maximizing security and minimizing vulnerability.[^2]
+- HyperMoose is decentralized software; your data is thus immune to pernicious corporations via a new technology where every client is also a server, allowing for high-speed direct connection.
 
 [^1]: i.e. Moose Code (while the system is indeed well-known, it is possibly only among a few individuals)
+[^2]: DISCLAIMER: HyperMoose is NOT secure. This statement is intended sarcasticly.

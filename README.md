@@ -11,6 +11,19 @@ HyperMoose is a free service targeted at tech-savvy meese looking for a reliable
 - HyperMoose employs a state-of-the-art TCP backend, maximizing security and minimizing vulnerability.[^2]
 - HyperMoose is decentralized software; your data is thus immune to pernicious corporations via a new technology where every client is also a server, allowing for high-speed direct connection.
 
+# Configuration
+
+```ini
+# This file stores the user's groups. Any content following a '#' is ignored.
+# 
+# Use the following examples for reference:
+# 
+# EXAMPLE GROUP: 192.168.1.42, 192.168.2.44
+# UNIVERSALLY DUMBFOUNDED HYPER-SPUDS: 192.168.0.15, 192.168.2.44, 192.168.10.101, 192.168.50.8
+
+Fred: localhost
+```
+
 # Screenshots
 
 <img width="795" height="260" alt="image" src="https://github.com/user-attachments/assets/841751b8-adf1-4968-8caf-a05e31b38555" />

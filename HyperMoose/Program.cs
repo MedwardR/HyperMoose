@@ -20,13 +20,27 @@ internal static partial class Program
 #endif
 
     [STAThread]
-    private static void Main()
+    private static void Main(string[] args)
     {
 #if DEBUG
         AllocConsole();
 #endif
+        string? arg0;
+
+        if (args.Length == 1)
+        {
+            arg0 = args[0].TrimStart('-').TrimStart('/');
+        }
+        else arg0 = null;
+
         ApplicationConfiguration.Initialize();
-        Application.Run(new TrayAppContext());
+        Application.SetCompatibleTextRenderingDefault(true);
+        Application.EnableVisualStyles();
+
+        bool silent = string.Equals(arg0, "silent", StringComparison.OrdinalIgnoreCase);
+        var context = new TrayAppContext(silent);
+
+        Application.Run(context);
     }
 
     internal class TrayAppContext : ApplicationContext
@@ -46,7 +60,7 @@ internal static partial class Program
         private Form1? _form;
         private CancellationTokenSource? _soundCTS;
 
-        public TrayAppContext()
+        public TrayAppContext(bool silent)
         {
             _appCTS = new();
             _random = new();
@@ -75,6 +89,11 @@ internal static partial class Program
                 Visible = true,
             };
             _notifyIcon.DoubleClick += OpenMainForm;
+
+            if (!silent)
+            {
+                OpenMainForm(null, EventArgs.Empty);
+            }
         }
 
         private void OpenMainForm(object? sender, EventArgs e)

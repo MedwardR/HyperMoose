@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "HyperMoose": {
+      "commandName": "Project"
+    },
+    "Silent": {
+      "commandName": "Project",
+      "commandLineArgs": "--silent"
+    }
+  }
+}

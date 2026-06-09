@@ -18,8 +18,7 @@ Source: "HyperMoose\bin\Publish\*"; DestDir: "{app}"; Flags: ignoreversion recur
 Name: "{group}\HyperMoose"; Filename: "{app}\HyperMoose.exe"
 
 [Registry]
-; Run on startup for current user
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "HyperMoose"; ValueData: """{app}\HyperMoose.exe"""; Flags: uninsdeletevalue
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "HyperMoose"; ValueData: """{app}\HyperMoose.exe"" --silent"; Flags: uninsdeletevalue
 
 [Run]
 Filename: "{app}\HyperMoose.exe"; Description: "Launch HyperMoose"; Flags: nowait postinstall skipifsilent

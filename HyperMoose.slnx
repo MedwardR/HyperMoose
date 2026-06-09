@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Publish/">
+    <File Path="installer.iss" />
+    <File Path="publish-and-build-installer.ps1" />
+  </Folder>
+  <Project Path="HyperMoose/HyperMoose.csproj" />
+  <Project Path="MooseCode/MooseCode.csproj" />
+</Solution>
